@@ -21,66 +21,103 @@ function App() {
       setPercentValue(percentValue + 25);
       setAddMoreUsername(false);
     }
+    
     else if(e.target.value === ""){
-      setPercentValue(percentValue - 25);
-      setAddMoreUsername(true);
+      if(percentValue === "PROCEED"){
+        setTemp("%");
+        setPercentValue(75);
+        setAddMoreUsername(true);
+      }
+      else{
+        setPercentValue(percentValue - 25);
+        setAddMoreUsername(true);
+      }
     }
+
 
     if(percentValue === 100){
       setTemp("");
-      setPercentValue("PROCEED")
+      setPercentValue("PROCEED");
     }
+  
   }
 
   const handleEmailChange = (e) => {
     if(e.target.value !== "" && addMoreEmail){
       
-      setPercentValue(percentValue + 25);
-      setAddMoreEmail(false);
+      if(percentValue === 100){
+        setTemp("");
+        setPercentValue("PROCEED")
+      }
+      else{
+        setPercentValue(percentValue + 25);
+        setAddMoreEmail(false);
+      }
     }
     else if(e.target.value === ""){
-      setPercentValue(percentValue - 25);
-      setAddMoreEmail(true);
+      if(percentValue === "PROCEED"){
+        setTemp("%");
+        setPercentValue(75);
+        setAddMoreEmail(true);
+      }
+      else{
+        setPercentValue(percentValue - 25);
+        setAddMoreEmail(true);
+      }
     }
 
-    if(percentValue === 100){
-      setTemp("");
-      setPercentValue("PROCEED")
-    }
-
+   
   }
 
   const handlePasswordChange = (e) => {
-    if(e.target.value !== "" && addMoreRepeatPassword){
+    if(e.target.value !== "" && addMorePassword){
       
-      setPercentValue(percentValue + 25);
-      setAddMoreRepeatPassword(false);
+      if(percentValue === 100){
+        setTemp("");
+        setPercentValue("PROCEED")
+      }
+      else{
+        setPercentValue(percentValue + 25);
+        setAddMorePassword(false);
+      }
     }
     else if(e.target.value === ""){
-      setPercentValue(percentValue - 25);
-      setAddMoreRepeatPassword(true);
+      if(percentValue === "PROCEED"){
+        setTemp("%");
+        setPercentValue(75);
+        setAddMorePassword(true);
+      }
+      else{
+        setPercentValue(percentValue - 25);
+        setAddMorePassword(true);
+      }
     }
 
-    if(percentValue === 100){
-      setTemp("");
-      setPercentValue("PROCEED")
-    }
+  
   }
 
   const handlePasswordRepeatChange = (e) => {
-    if(e.target.value !== "" && addMorePassword){
+    if(e.target.value !== "" && addMoreRepeatPassword){
       
-      setPercentValue(percentValue + 25);
-      setAddMorePassword(false);
+      if(percentValue === 100){
+        setTemp("");
+        setPercentValue("PROCEED")
+      }
+      else{
+        setPercentValue(percentValue + 25);
+        setAddMoreRepeatPassword(false);
+      }
     }
     else if(e.target.value === ""){
-      setPercentValue(percentValue - 25);
-      setAddMorePassword(true);
-    }
-
-    if(percentValue === 100){
-      setTemp("");
-      setPercentValue("PROCEED")
+      if(percentValue === "PROCEED"){
+        setTemp("%");
+        setPercentValue(75);
+        setAddMoreRepeatPassword(true);
+      }
+      else{
+        setPercentValue(percentValue - 25);
+        setAddMoreRepeatPassword(true);
+      }
     }
 
   }
