@@ -75,7 +75,7 @@ function App() {
   }
 
   return (
-    <div className="tracking-widest leading-loose font-mono font-black text-2xl text-center w-screen h-screen bg-gray-200">
+    <div className="tracking-widest leading-loose font-mono font-black text-2xl text-center w-screen h-screen bg-gray-700">
       <h1 className="border border-green-600 border-b-8 text-green-600">REGISTRATION</h1>
       <div className="flex flex-row justify-between mx-48">
       <form className="mx-5 w-2/6 my-12 flex gap-2 justify-center flex-col">
